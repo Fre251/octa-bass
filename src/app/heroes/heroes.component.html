@@ -1,0 +1,16 @@
+<h2>My Heroes </h2>
+<div>
+  <label>
+    Search Box:
+    <input [(ngModel)]="querrystring" placeholder="name">
+  </label>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes | search1:querrystring">
+      <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span>
+      <span>{{hero.name}}</span>
+      <span class ="deptbadge">{{hero.dept}}</span>
+      </a>
+      </li>
+  </ul>
+</div>
